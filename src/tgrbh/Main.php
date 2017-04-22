@@ -10,16 +10,16 @@ use pocketmine\command\Command;
 class Main extends PluginBase{
   
   public function onEnable(){
-    $this->getServer()->getLogger()->info(Color::GREEN."Plugin is on")
+    $this->getServer()->getLogger()->info(Color::GREEN."Plugin is on");
   }
   
   public function onCommand(CommandSender $sender, Command $cmd, $label, array $args){
     if($sender->isOp()){
       switch($cmd->getName()){
-        case 'cmd':
-          $sender->sendMessage(Color::WHITE."Hi");
+        case 'heal':
+          $sender->setHealth(20);
       } else {
-        $sender->sendMessage(Color::RED."You Not OP !!");
+        $sender->setHealth(Color::RED."You Not OP !!");
       }
     }
   }
