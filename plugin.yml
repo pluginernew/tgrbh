@@ -1,0 +1,16 @@
+name: tgrbh
+author: Pluginernew
+main: tgrbh\Main
+version: "1.6"
+api: [2.0.0]
+commands:
+ heal: 
+  description: heal yourself !
+use: /heal
+permission: heal.command
+default: op
+
+permission:
+  heal.command:
+    description: "permission for plugin healBS"
+    default: op
